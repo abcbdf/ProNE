@@ -53,6 +53,8 @@ def evaluate():
 	print(features_matrix.shape)
 	nodesize = features_matrix.shape[0]
 	label_matrix = load_labels(args.label, nodesize)
+	print(label_matrix)
+	exit()
 	number_shuffles = args.shuffle
 	
 	shuffles = []
