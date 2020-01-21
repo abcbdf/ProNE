@@ -53,8 +53,8 @@ def evaluate():
 	print(features_matrix.shape)
 	nodesize = features_matrix.shape[0]
 	label_matrix = load_labels(args.label, nodesize)
-	print(label_matrix)
-	exit()
+	# print(label_matrix)
+	# exit()
 	number_shuffles = args.shuffle
 	
 	shuffles = []
@@ -91,6 +91,7 @@ def evaluate():
 	print('Results, using embeddings of dimensionality', X.shape[1])
 	print('-------------------')
 	print('Train percent:', 'average f1-score')
+	print(all_results)
 	for train_percent in sorted(all_results.keys()):
 		av = 0
 		stder = np.ones(number_shuffles)
